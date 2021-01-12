@@ -135,17 +135,13 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-DEBUG_PROPAGATE_EXCEPTIONS = True
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-Okay - having battled for a bit I've found a solution to both issues I was having.
-
-Issue 1: Unable to view heroku logs --source app:
-I had to first add LOGGING to the settings.py file:
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 LOGGING = {
     'version': 1,
