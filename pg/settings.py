@@ -174,3 +174,4 @@ LOGGING = {
             'level': 'INFO',
         }
     }
+}
