@@ -25,7 +25,7 @@ SECRET_KEY = '@t$z36*lc1d99d(790e9*8zw(6alcj7pzlj%ri7$rha3u1iox%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://pogen-poetry-generator.herokuapp.com/']
+ALLOWED_HOSTS = ['pogen-poetry-generator.herokuapp.com/']
 
 
 # Application definition
