@@ -135,6 +135,7 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
