@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method = "POST"  action = {% url 'poem' %} > 
+        {% csrf_token %}
+
+        <div class = "row">
+            <div class="col-6">
+            {{form.genre | as_crispy_field}}
+            </div>
+
+            <div class="col-6">
+            {{form.syls | as_crispy_field}}
+            </div>
+        </div>
+        <br />
+        
+        <input type = "submit" class="btn btn-success" value = "Generate" />
+
+    </form>
+
+{% endblock %}
